@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body{
-    margin: 0;
+
+body {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -11,20 +12,68 @@ body{
     margin: 0px 166px;
 } 
 .header {
-    background-image: url(HERO\ IMG.jpg);
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+    position: absolute;
+    width: 100%;
+    top: 0;
 }
 
+.main {
+    height: 100vh;
+    background-image: url(HERO\ IMG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+}
+
+.content h1 {
+    color: #D67E35;
+    font-family: 'Tinos', serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.content .subtitle {
+    margin: 20px;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    text-align: center;
+}
+
+.content .subtitle::after, 
+.content .subtitle::before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 61px;
+    background-color: #fff;
+    top: 13px;
+}
+
+.content .subtitle::after {
+    left: 20px;
+}
+
+.content .subtitle::before {
+    right: 20px;
+}
+
+.content .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
 
 .header-line{
-   padding-top: 50px; 
-   display: flex;
-   align-items: center;
-    justify-content: space-around;
-
+    padding-top: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav-item{
@@ -32,9 +81,7 @@ body{
     text-decoration: none;
     font-weight: 700;
     font-size: 17px;
-
     margin-right: 25px;
-
     transition: color 0.2s linear;
 }
 
@@ -140,4 +187,12 @@ body{
 
 .header-button{
 
+}
+
+.about {
+    height: 100vh;
+}
+
+.down {
+    height: 100vh;
 }
